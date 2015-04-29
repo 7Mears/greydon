@@ -1,0 +1,45 @@
+$red:           #F44336;
+$pink:          #E91E63;
+$purple:        #9C27B0;
+$deep-purple:   #673AB7;
+$indigo:        #3F51B5;
+$blue:          #2196F3;
+$light-blue:    #03A9F4;
+$cyan:          #00BCD4;
+$teal:          #009688;
+$green:         #4CAF50;
+$light-green:   #8BC34A;
+$lime:          #CDDC39;
+$yellow:        #FFEB3B;
+$amber:         #FFC107;
+$orange:        #FF9800;
+$deep-orange:   #FF5722;
+$brown:         #795548;
+$grey:          #9E9E9E;
+$blue-grey:     #607D8B;
+$black:         #212121;
+$white:         #FAFAFA;
+
+
+$color1: $white;
+$color2: $black;
+$color3: $cyan;
+$color4: $red;
+$color5: $lime;
+$color6: $blue-grey;
+
+$color__background-body: $color1;
+
+$color__text-main: $color2;
+$color__text-main-light: lighten($color__text-main, 20%);
+
+$color__link: $color3;
+$color__link-hover: $color4;
+$color__link-visited: $color__link;
+
+$color__border-button: $color3;
+$color__background-button: $color1;
+$color__border-button-hover: $color6;
+$color__border-button-focus: $color__border-button-hover;
+
+$color__background-hr: $color6;
