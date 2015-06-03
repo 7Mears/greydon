@@ -141,7 +141,7 @@ function current_to_active($text){
 add_filter ('wp_nav_menu','current_to_active');
 
 
-add_action( 'after_setup_theme', 'platinum_setup' );
+add_action( 'after_setup_theme', 'eyedea_setup' );
 
 // Remove meta links at header
 remove_action( 'wp_head', 'wp_generator' ) ;
