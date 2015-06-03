@@ -1,15 +1,18 @@
-/*
-* sudo npm install --save-dev gulp gulp-util gulp-concat gulp-watch gulp-compass gulp-plumber gulp-livereload
-*/
+//
+// sudo npm install --save-dev gulp gulp-html-prettify gulp-util gulp-uglifyjs gulp-concat gulp-watch gulp-compass gulp-plumber gulp-livereload
+//
 
-var gulp 				= require("gulp"),
-	gutil 				= require("gulp-util"),
-	concat				= require("gulp-concat"),
-	watch 				= require("gulp-watch"),
-	compass 			= require("gulp-compass"),
-	plumber				= require("gulp-plumber"),
-	livereload = require('gulp-livereload')
+var gulp 					= require("gulp"),
+		gutil 				= require("gulp-util"),
+		concat				= require("gulp-concat"),
+		watch 				= require("gulp-watch"),
+		compass 			= require("gulp-compass"),
+		uglify				= require('gulp-uglifyjs'),
+		plumber				= require("gulp-plumber"),
+		prettify 			= require('gulp-html-prettify'),
+		livereload 		= require('gulp-livereload');
 
+// Paths
 var paths = {
 	styles: {
 		src: "./sass/**/*.scss",
@@ -17,11 +20,25 @@ var paths = {
 	}
 };
 
+// Error handler
 function handleError(err) {
   console.log(err.toString());
   this.emit('end');
 }
 
+////////////////////////////////////////////////////////////////////////////////
+////////// WEBSITE TASKS //////////
+////////////////////////////////////////////////////////////////////////////////
+
+// HTML
+gulp.task('html', function() {
+  gulp.src('./*.php')
+    .pipe(prettify({indent_char: ' ', indent_size: 2}))
+    .pipe(gulp.dest('./dist/'))
+});
+
+
+// Sass
 gulp.task("styles", function() {
 	return gulp.src(paths.styles.src)
 		.pipe(plumber())
@@ -36,8 +53,45 @@ gulp.task("styles", function() {
 		.pipe(livereload());
 });
 
-
-gulp.task("default", function() {
-	livereload.listen();
-	gulp.watch(paths.styles.src, ["styles"]);
+// JS
+// minified
+gulp.task('uglifyjs', function() {
+  gulp.src(['./js/*.js'])
+	.pipe(uglify('app.js', {
+		outSourceMap: true
+	}))
+    .pipe(gulp.dest('./js'))
 });
+
+// beautify
+gulp.task('beautifyjs', function() {
+	gulp.src(['./js/*.js'])
+    .pipe(uglify('app.js', {
+      mangle: false,
+      output: {
+        beautify: true
+      }
+    }))
+		.pipe(gulp.dest('./js'))
+});
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////// WATCH AND BUILD TASKS //////////
+////////////////////////////////////////////////////////////////////////////////
+
+// watch
+gulp.task('up', function() {
+	livereload.listen();
+	// Watch Sass
+	gulp.watch(paths.styles.src, ['styles']);
+	// Watch JS
+	gulp.watch('./js/script.js', ['beautifyjs']);
+	// Watch HTML and livereload
+	gulp.watch('**/*.php', ['html']);
+});
+
+// Default task
+gulp.task('default', ['styles', 'uglifyjs']);
