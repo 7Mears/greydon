@@ -1,6 +1,7 @@
-//
-// sudo npm install --save-dev gulp gulp-html-prettify gulp-util gulp-uglifyjs gulp-concat gulp-watch gulp-compass gulp-plumber gulp-livereload
-//
+
+// npm install --save-dev gulp gulp-html-prettify gulp-util gulp-uglifyjs gulp-concat gulp-watch gulp-compass gulp-plumber gulp-livereload
+
+//////////
 
 var gulp 					= require("gulp"),
 		gutil 				= require("gulp-util"),
@@ -30,15 +31,23 @@ function handleError(err) {
 ////////// WEBSITE TASKS //////////
 ////////////////////////////////////////////////////////////////////////////////
 
+//////////
 // HTML
+//////////
+
 gulp.task('html', function() {
-  gulp.src('./*.php')
+  gulp.src([
+		'!./functions.php',
+		'./*.php'
+	])
     .pipe(prettify({indent_char: ' ', indent_size: 2}))
-    .pipe(gulp.dest('./dist/'))
+    .pipe(gulp.dest('./'))
 });
 
-
+//////////
 // Sass
+//////////
+
 gulp.task("styles", function() {
 	return gulp.src(paths.styles.src)
 		.pipe(plumber())
@@ -53,10 +62,16 @@ gulp.task("styles", function() {
 		.pipe(livereload());
 });
 
+//////////
 // JS
-// minified
+//////////
+
+// minify
 gulp.task('uglifyjs', function() {
-  gulp.src(['./js/*.js'])
+  gulp.src([
+		'!./js/app.js',
+		'./js/*.js'
+		])
 	.pipe(uglify('app.js', {
 		outSourceMap: true
 	}))
@@ -65,7 +80,10 @@ gulp.task('uglifyjs', function() {
 
 // beautify
 gulp.task('beautifyjs', function() {
-	gulp.src(['./js/*.js'])
+	gulp.src([
+		'!./js/app.js',
+		'./js/*.js'
+		])
     .pipe(uglify('app.js', {
       mangle: false,
       output: {
@@ -73,10 +91,8 @@ gulp.task('beautifyjs', function() {
       }
     }))
 		.pipe(gulp.dest('./js'))
+		.pipe(livereload());
 });
-
-
-
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////// WATCH AND BUILD TASKS //////////
@@ -89,9 +105,10 @@ gulp.task('up', function() {
 	gulp.watch(paths.styles.src, ['styles']);
 	// Watch JS
 	gulp.watch('./js/script.js', ['beautifyjs']);
-	// Watch HTML and livereload
-	gulp.watch('**/*.php', ['html']);
 });
 
+// Build task
+gulp.task('build', ['styles', 'uglifyjs', 'html']);
+
 // Default task
-gulp.task('default', ['styles', 'uglifyjs']);
+gulp.task('defualt', ['styles', 'beautifyjs', 'html']);
