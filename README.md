@@ -63,3 +63,8 @@ a {
 .faded-text {
   @include opacity(0.8);
 }
+
+* The amazing row machine!
+.person {
+  @include rowMachine(5, 2%);
+}

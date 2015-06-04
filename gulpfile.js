@@ -99,7 +99,7 @@ gulp.task('beautifyjs', function() {
 ////////////////////////////////////////////////////////////////////////////////
 
 // watch
-gulp.task('up', function() {
+gulp.task('watch', function() {
 	livereload.listen();
 	// Watch Sass
 	gulp.watch(paths.styles.src, ['styles']);

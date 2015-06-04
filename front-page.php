@@ -2,7 +2,7 @@
 <div class="container">
 
   <section class="hero">
-    <h1>testStarter page</h1>
+    <h1>Starter page</h1>
     <p>Competently mesh adaptive bandwidth after mission-critical information. Dynamically plagiarize interdependent infomediaries and.</p>
   </section>
 
