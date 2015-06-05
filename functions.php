@@ -4,6 +4,7 @@
  *
  * @package eyedea
  */
+
 //Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
@@ -55,6 +56,16 @@ function eyedea_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'eyedea_widgets_init' );
+
+/**
+*	Use latest jQuery release
+*/
+if( !is_admin() ){
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"), false, '');
+	wp_enqueue_script('jquery');
+}
+
 /**
  * Enqueue scripts and styles.
  */
