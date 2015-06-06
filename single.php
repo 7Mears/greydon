@@ -1,4 +1,8 @@
-<?php /** * @package eyedea */ get_header(); ?>
+<?php
+/**
+* @package eyedea
+*/
+get_header(); ?>
 
 <div class="container">
   <main id="main" class="site-main" role="main">
@@ -18,5 +22,4 @@
 </div>
 <!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

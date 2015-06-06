@@ -108,7 +108,7 @@ gulp.task('watch', function() {
 });
 
 // Build task
-gulp.task('build', ['styles', 'uglifyjs', 'html']);
+gulp.task('build', ['styles', 'uglifyjs']);
 
 // Default task
-gulp.task('defualt', ['styles', 'beautifyjs', 'html']);
+gulp.task('default', ['styles', 'beautifyjs']);

@@ -1,4 +1,8 @@
-<?php /** * @package eyedea */ get_header(); ?>
+<?php
+/**
+* @package eyedea
+*/
+get_header(); ?>
 
 <main id="main" class="site-main container" role="main">
 

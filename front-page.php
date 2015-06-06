@@ -1,4 +1,9 @@
-<?php /** * @package eyedea */ get_header(); ?>
+<?php
+/**
+* @package eyedea
+*/
+get_header(); ?>
+
 <div class="container">
 
   <section class="hero">

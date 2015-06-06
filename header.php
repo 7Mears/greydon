@@ -1,4 +1,9 @@
-<?php /** * @package eyedea */ ?>
+<?php
+/**
+* @package eyedea
+*/
+?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 

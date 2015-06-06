@@ -1,4 +1,8 @@
-<?php /** * @package eyedea */ ?>
+<?php
+/**
+* @package eyedea
+*/
+?>
 
 <footer class="site-footer">
   <div class="site-info container">

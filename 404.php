@@ -1,4 +1,9 @@
-<?php /** * The template for displaying 404 pages (not found). * * @package eyedea */ get_header(); ?>
+<?php
+/** * The template for displaying 404 pages (not found).
+*
+* @package eyedea
+*/
+get_header(); ?>
 
 <div id="primary" class="content-area container">
   <main id="main" class="site-main" role="main">
