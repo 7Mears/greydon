@@ -549,12 +549,12 @@ a:hover, a:active {
   margin-left: 2em;
 }
 
-/* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
 }
 
+/* Full screen */
 @media screen and (min-width: 50em) {
   .menu-toggle {
     display: none;
@@ -564,6 +564,93 @@ a:hover, a:active {
     display: block;
   }
 }
+/* Mobile */
+@media screen and (max-width: 50em) {
+  .main-navigation {
+    display: block;
+    z-index: 11;
+  }
+  .main-navigation li {
+    width: 100%;
+    padding: 0.5em 0;
+    font-size: 32px;
+    font-size: 2rem;
+  }
+  .main-navigation .sub-menu li {
+    display: none;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #212121;
+    z-index: 10;
+  }
+}
+.menu-toggle {
+  margin-top: 1em;
+  position: relative;
+  float: right;
+  width: 4em;
+  height: 4em;
+  border: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 11;
+  background: transparent;
+}
+.menu-toggle span {
+  position: absolute;
+  top: 55%;
+  display: block;
+  width: 80%;
+  left: 10%;
+  height: 0.5em;
+  margin-top: -0.5em;
+  background-color: #00BCD4;
+}
+.menu-toggle span:before, .menu-toggle span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: #00BCD4;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.menu-toggle span:before {
+  -webkit-transform: translateY(-1em);
+  transform: translateY(-1em);
+}
+.menu-toggle span::after {
+  -webkit-transform: translateY(1em);
+  transform: translateY(1em);
+}
+
+/* OPENED */
+.toggled button {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.toggled button span:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.toggled button span:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
@@ -771,5 +858,8 @@ object {
 }
 
 .site-branding {
-  display: inline-block;
+  float: left;
+}
+.site-branding h1 {
+  margin: 0;
 }

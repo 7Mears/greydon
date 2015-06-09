@@ -29,14 +29,6 @@
 			a {
 				width: 200px;
 			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
 		}
 
 		li:hover > ul,
@@ -47,29 +39,20 @@
 	li {
 		float: left;
 		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
 	}
 	a {
 		display: block;
 		text-decoration: none;
 		margin-left: $padding-main;
 	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-	}
 }
 
-/* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
 
+/* Full screen */
 @media screen and (min-width: $M) {
 	.menu-toggle {
 		display: none;
@@ -79,3 +62,36 @@
 		display: block;
 	}
 }
+
+/* Mobile */
+@media screen and (max-width: $M) {
+  .main-navigation {
+    display: block;
+    z-index: 11;
+
+    li {
+      width: 100%;
+      padding: 0.5em 0;
+      @include font-size(2);
+    }
+
+  .sub-menu {
+    li {
+      display: none;
+      }
+    }
+  }
+
+// full screen menu
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color2;
+    z-index: 10;
+  }
+}
+
+@import "menu-icon";

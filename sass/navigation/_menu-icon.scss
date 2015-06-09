@@ -1,0 +1,61 @@
+.menu-toggle {
+  margin-top: 1em;
+  position: relative;
+  float: right;
+  width: 4em;
+  height: 4em;
+  border: none;
+  @include transition(all 0.3s);
+  z-index: 11;
+  background: rgba(0,0,0,0);
+
+  span {
+    position: absolute;
+    top: 55%;
+    display: block;
+    width: 80%;
+    left: 10%;
+    height: 0.5em;
+    margin-top: -0.5em;
+    background-color: $color__border-button;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      background-color: $color__border-button;
+      @include transition(all 0.3s);
+    }
+    &:before {
+      -webkit-transform: translateY(-1em);
+    	        transform: translateY(-1em);
+    }
+
+    &::after {
+      -webkit-transform: translateY(1em);
+    	        transform: translateY(1em);
+    }
+
+  }
+}
+
+/* OPENED */
+
+.toggled button {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+  span:before {
+    -webkit-transform: rotate(90deg);
+  	        transform: rotate(90deg);
+  }
+
+  span:after {
+    -webkit-transform: rotate(90deg);
+  	        transform: rotate(90deg);
+  }
+
+}
