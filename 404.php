@@ -1,7 +1,7 @@
 <?php
 /** * The template for displaying 404 pages (not found).
 *
-* @package eyedea
+* @package greydon
 */
 get_header(); ?>
 
@@ -10,13 +10,13 @@ get_header(); ?>
 
     <section class="error-404 not-found">
       <header class="page-header">
-        <h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'eyedea' ); ?></h1>
+        <h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'greydon' ); ?></h1>
       </header>
       <!-- .page-header -->
 
       <div class="page-content">
         <p>
-          <?php esc_html_e( 'It looks like nothing was found at this location. Maybe try the search?', 'eyedea' ); ?>
+          <?php esc_html_e( 'It looks like nothing was found at this location. Maybe try the search?', 'greydon' ); ?>
         </p>
 
         <?php get_search_form(); ?>

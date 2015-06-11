@@ -1,6 +1,6 @@
 <?php
 /**
- * @package eyedea
+ * @package greydon
  */
 ?>
 
@@ -9,7 +9,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<?php eyedea_posted_on(); ?>
+			<?php greydon_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -17,13 +17,13 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'eyedea' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'greydon' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php eyedea_entry_footer(); ?>
+		<?php greydon_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

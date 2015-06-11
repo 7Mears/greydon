@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package eyedea
+ * @package greydon
  */
 
 if ( ! function_exists( 'the_posts_navigation' ) ) :
@@ -20,15 +20,15 @@ function the_posts_navigation() {
 	}
 	?>
 	<nav class="navigation posts-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'eyedea' ); ?></h2>
+		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'greydon' ); ?></h2>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'eyedea' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'greydon' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'eyedea' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'greydon' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -53,7 +53,7 @@ function the_post_navigation() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'eyedea' ); ?></h2>
+		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'greydon' ); ?></h2>
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
@@ -65,11 +65,11 @@ function the_post_navigation() {
 }
 endif;
 
-if ( ! function_exists( 'eyedea_posted_on' ) ) :
+if ( ! function_exists( 'greydon_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function eyedea_posted_on() {
+function greydon_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -83,12 +83,12 @@ function eyedea_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'eyedea' ),
+		_x( 'Posted on %s', 'post date', 'greydon' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		_x( 'by %s', 'post author', 'eyedea' ),
+		_x( 'by %s', 'post author', 'greydon' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -97,33 +97,33 @@ function eyedea_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'eyedea_entry_footer' ) ) :
+if ( ! function_exists( 'greydon_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function eyedea_entry_footer() {
+function greydon_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( __( ', ', 'eyedea' ) );
-		if ( $categories_list && eyedea_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'eyedea' ) . '</span>', $categories_list );
+		$categories_list = get_the_category_list( __( ', ', 'greydon' ) );
+		if ( $categories_list && greydon_categorized_blog() ) {
+			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'greydon' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', 'eyedea' ) );
+		$tags_list = get_the_tag_list( '', __( ', ', 'greydon' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'eyedea' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'greydon' ) . '</span>', $tags_list );
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'eyedea' ), __( '1 Comment', 'eyedea' ), __( '% Comments', 'eyedea' ) );
+		comments_popup_link( __( 'Leave a comment', 'greydon' ), __( '1 Comment', 'greydon' ), __( '% Comments', 'greydon' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'eyedea' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( __( 'Edit', 'greydon' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 
@@ -140,45 +140,45 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
-		$title = sprintf( __( 'Category: %s', 'eyedea' ), single_cat_title( '', false ) );
+		$title = sprintf( __( 'Category: %s', 'greydon' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
-		$title = sprintf( __( 'Tag: %s', 'eyedea' ), single_tag_title( '', false ) );
+		$title = sprintf( __( 'Tag: %s', 'greydon' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {
-		$title = sprintf( __( 'Author: %s', 'eyedea' ), '<span class="vcard">' . get_the_author() . '</span>' );
+		$title = sprintf( __( 'Author: %s', 'greydon' ), '<span class="vcard">' . get_the_author() . '</span>' );
 	} elseif ( is_year() ) {
-		$title = sprintf( __( 'Year: %s', 'eyedea' ), get_the_date( _x( 'Y', 'yearly archives date format', 'eyedea' ) ) );
+		$title = sprintf( __( 'Year: %s', 'greydon' ), get_the_date( _x( 'Y', 'yearly archives date format', 'greydon' ) ) );
 	} elseif ( is_month() ) {
-		$title = sprintf( __( 'Month: %s', 'eyedea' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'eyedea' ) ) );
+		$title = sprintf( __( 'Month: %s', 'greydon' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'greydon' ) ) );
 	} elseif ( is_day() ) {
-		$title = sprintf( __( 'Day: %s', 'eyedea' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'eyedea' ) ) );
+		$title = sprintf( __( 'Day: %s', 'greydon' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'greydon' ) ) );
 	} elseif ( is_tax( 'post_format' ) ) {
 		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-			$title = _x( 'Asides', 'post format archive title', 'eyedea' );
+			$title = _x( 'Asides', 'post format archive title', 'greydon' );
 		} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-			$title = _x( 'Galleries', 'post format archive title', 'eyedea' );
+			$title = _x( 'Galleries', 'post format archive title', 'greydon' );
 		} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-			$title = _x( 'Images', 'post format archive title', 'eyedea' );
+			$title = _x( 'Images', 'post format archive title', 'greydon' );
 		} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-			$title = _x( 'Videos', 'post format archive title', 'eyedea' );
+			$title = _x( 'Videos', 'post format archive title', 'greydon' );
 		} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-			$title = _x( 'Quotes', 'post format archive title', 'eyedea' );
+			$title = _x( 'Quotes', 'post format archive title', 'greydon' );
 		} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-			$title = _x( 'Links', 'post format archive title', 'eyedea' );
+			$title = _x( 'Links', 'post format archive title', 'greydon' );
 		} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-			$title = _x( 'Statuses', 'post format archive title', 'eyedea' );
+			$title = _x( 'Statuses', 'post format archive title', 'greydon' );
 		} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-			$title = _x( 'Audio', 'post format archive title', 'eyedea' );
+			$title = _x( 'Audio', 'post format archive title', 'greydon' );
 		} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-			$title = _x( 'Chats', 'post format archive title', 'eyedea' );
+			$title = _x( 'Chats', 'post format archive title', 'greydon' );
 		}
 	} elseif ( is_post_type_archive() ) {
-		$title = sprintf( __( 'Archives: %s', 'eyedea' ), post_type_archive_title( '', false ) );
+		$title = sprintf( __( 'Archives: %s', 'greydon' ), post_type_archive_title( '', false ) );
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-		$title = sprintf( __( '%1$s: %2$s', 'eyedea' ), $tax->labels->singular_name, single_term_title( '', false ) );
+		$title = sprintf( __( '%1$s: %2$s', 'greydon' ), $tax->labels->singular_name, single_term_title( '', false ) );
 	} else {
-		$title = __( 'Archives', 'eyedea' );
+		$title = __( 'Archives', 'greydon' );
 	}
 
 	/**
@@ -226,8 +226,8 @@ endif;
  *
  * @return bool
  */
-function eyedea_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'eyedea_categories' ) ) ) {
+function greydon_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'greydon_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -240,27 +240,27 @@ function eyedea_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'eyedea_categories', $all_the_cool_cats );
+		set_transient( 'greydon_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so eyedea_categorized_blog should return true.
+		// This blog has more than 1 category so greydon_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so eyedea_categorized_blog should return false.
+		// This blog has only 1 category so greydon_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in eyedea_categorized_blog.
+ * Flush out the transients used in greydon_categorized_blog.
  */
-function eyedea_category_transient_flusher() {
+function greydon_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'eyedea_categories' );
+	delete_transient( 'greydon_categories' );
 }
-add_action( 'edit_category', 'eyedea_category_transient_flusher' );
-add_action( 'save_post',     'eyedea_category_transient_flusher' );
+add_action( 'edit_category', 'greydon_category_transient_flusher' );
+add_action( 'save_post',     'greydon_category_transient_flusher' );

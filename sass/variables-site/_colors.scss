@@ -23,14 +23,15 @@ $white:         #FAFAFA;
 
 $color1: $white;
 $color2: $black;
-$color3: $cyan;
+$color3: #EFB64D;
 $color4: $red;
-$color5: $lime;
+$color5: #081230;
 $color6: $blue-grey;
 
-$color__background-body: $color1;
+$color__background-body: $color5;
+$color__background-darker: darken($color5, 5%);
 
-$color__text-main: $color2;
+$color__text-main: $color1;
 $color__text-main-light: lighten($color__text-main, 20%);
 
 $color__link: $color3;

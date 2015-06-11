@@ -1,0 +1,27 @@
+.album-post {
+  position: relative;
+  @include clearfix-after();
+}
+
+.album-embed,
+.album-info {
+  margin-top: ($padding-main * 2);
+}
+
+.album-embed {
+  width: 30%;
+  float: left;
+}
+
+.album-info {
+  width: 70%;
+  float: right;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  p {
+    @include font-size(1);
+  }
+}

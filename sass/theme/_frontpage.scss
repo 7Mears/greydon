@@ -1,0 +1,57 @@
+//global
+.section-left {
+  width: 30%;
+  float: left;
+}
+
+.section-right {
+  float: right;
+  width: 70%;
+}
+
+.section-title {
+  border-bottom: 2px solid rgba($color6, 0.6);
+  margin-right: 50px;
+  color: rgba(255,255,255,0.6);
+  padding-top: 0.5em;
+}
+//hero
+.hero-bg {
+  position: fixed;
+  z-index: -1;
+  height: 900px;
+  width: 100%;
+  background: url('./images/hero.jpg') no-repeat center center;
+  background-attachment: fixed;
+}
+
+.hero-content {
+  position: relative;
+  padding: 200px 0 300px 0;
+  width: 100%;
+  @include clearfix();
+}
+
+.hero-title {
+  color: $color3;
+  font-family: $font__primary;
+  @include font-size(5);
+  font-weight: 700;
+  text-shadow: 1px 1px 20px rgba($color3, 0.4)
+            , -1px -1px 20px rgba($color3, 0.4);
+  margin: 0;
+  line-height: 1.2;
+}
+
+//blog
+.news-content {
+  position: relative;
+  width: 100%;
+  @include clearfix();
+
+  .section-right {
+    h2 {
+      margin: 0;
+    }
+  }
+}

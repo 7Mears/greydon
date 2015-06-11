@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-eyedea
+greydon
 ===
 
-Hi. I'm a starter theme called eyedea.
+Hi. I'm a starter theme called greydon.
 
 
 Getting Started
@@ -11,7 +11,7 @@ Getting Started
 
 * Replace 'new-site-name' with the new name and '~/Desktop/Website/site-name/' with the folder location
 
-perl -pi -w -e 's/eyedea/new-site-name/g;' ~/Desktop/Website/site-name/*
+perl -pi -w -e 's/greydon/new-site-name/g;' ~/Desktop/Website/site-name/*
 
 * To get gulp running, install the dependencies
 

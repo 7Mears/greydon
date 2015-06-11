@@ -1,7 +1,23 @@
 .site-branding {
   float: left;
+  a {
+    font-weight: 400;
+    @include font-size(2);
+    text-decoration: none;
+    color: $color1;
+  }
 
   h1 {
     margin: 0;
   }
+}
+
+.site-header {
+  float: left;
+  width: 100%;
+}
+
+.site-logo {
+  width: 200px;
+  margin-top: 0.5em;
 }

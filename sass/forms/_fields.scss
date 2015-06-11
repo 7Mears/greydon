@@ -6,7 +6,7 @@ input[type="search"],
 textarea {
 	color: $color__text-main-light;
 	border: 1px solid rgba(0,0,0,0.2);
-	border-radius: 3px;
+	background-color: rgba(255,255,255,0.1);
 
 	&:focus {
 		color: $color__text-main;
@@ -18,10 +18,10 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-	padding: 3px;
+	padding: 0.5em;
 }
 
 textarea {
-	padding-left: 3px;
+	padding-left: 0.5em;
 	width: 100%;
 }

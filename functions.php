@@ -1,18 +1,18 @@
 <?php
 /**
- * eyedea functions and definitions
+ * greydon functions and definitions
  *
- * @package eyedea
+ * @package greydon
  */
 
 //Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
-if ( ! function_exists( 'eyedea_setup' ) ) :
-function eyedea_setup() {
+if ( ! function_exists( 'greydon_setup' ) ) :
+function greydon_setup() {
 	// Add language support
-	load_theme_textdomain( 'eyedea', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'greydon', get_template_directory() . '/languages' );
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 	//Let WordPress manage the document title.
@@ -21,7 +21,7 @@ function eyedea_setup() {
 	add_theme_support( 'post-thumbnails' );
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'eyedea' ),
+		'primary' => __( 'Primary Menu', 'greydon' ),
 	) );
 	// Switch default markup for search form, comment form, and comments to output valid HTML5.
 	add_theme_support( 'html5', array(
@@ -32,21 +32,21 @@ function eyedea_setup() {
 		'aside', 'image', 'video', 'quote', 'link',
 	) );
 	// Set up the WordPress custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'eyedea_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'greydon_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // eyedea_setup
-add_action( 'after_setup_theme', 'eyedea_setup' );
+endif; // greydon_setup
+add_action( 'after_setup_theme', 'greydon_setup' );
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function eyedea_widgets_init() {
+function greydon_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'eyedea' ),
+		'name'          => __( 'Sidebar', 'greydon' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -55,7 +55,7 @@ function eyedea_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'eyedea_widgets_init' );
+add_action( 'widgets_init', 'greydon_widgets_init' );
 
 /**
 *	Use latest jQuery release
@@ -69,11 +69,11 @@ if( !is_admin() ){
 /**
  * Enqueue scripts and styles.
  */
-function eyedea_scripts() {
+function greydon_scripts() {
 	// Main stylesheet
-	wp_enqueue_style( 'eyedea-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'greydon-style', get_stylesheet_uri() );
 	// Main javascript file with jquery
-	wp_enqueue_script( 'eyedea-javascript', get_template_directory_uri() . '/js/app.js', array('jquery'), '20130115', true );
+	wp_enqueue_script( 'greydon-javascript', get_template_directory_uri() . '/js/app.js', array('jquery'), '20130115', true );
 	// Google Fonts
 	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Roboto:500,900,400italic,100,700italic,300,700,500italic,100italic,300italic,400|Roboto+Slab:400,100,300,700');
 	wp_enqueue_style( 'googleFonts');
@@ -83,7 +83,7 @@ function eyedea_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'eyedea_scripts' );
+add_action( 'wp_enqueue_scripts', 'greydon_scripts' );
 // Implement the Custom Header feature.
   //require get_template_directory() . '/inc/custom-header.php';
 //Custom template tags for this theme.
@@ -125,7 +125,7 @@ function current_to_active($text){
 	return $text;
 }
 add_filter ('wp_nav_menu','current_to_active');
-add_action( 'after_setup_theme', 'eyedea_setup' );
+add_action( 'after_setup_theme', 'greydon_setup' );
 // Remove meta links at header
 remove_action( 'wp_head', 'wp_generator' ) ;
 remove_action( 'wp_head', 'wlwmanifest_link' ) ;

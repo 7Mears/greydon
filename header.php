@@ -1,6 +1,6 @@
 <?php
 /**
-* @package eyedea
+* @package greydon
 */
 ?>
 
@@ -23,7 +23,7 @@
       <div class="container">
 
         <div class="site-branding">
-          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img id="slide-img-1" src="<?php echo get_bloginfo('template_directory');?>/images/logo.png" class="site-logo" alt="" /></a>
         </div>
         <!-- /site-branding -->
 

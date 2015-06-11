@@ -1,6 +1,6 @@
 <?php
 /**
- * @package eyedea
+ * @package greydon
  */
 ?>
 
@@ -10,7 +10,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php eyedea_posted_on(); ?>
+			<?php greydon_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -20,6 +20,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php eyedea_entry_footer(); ?>
+		<?php greydon_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

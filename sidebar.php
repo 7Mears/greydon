@@ -1,6 +1,6 @@
 <?php
 /**
-* @package eyedea
+* @package greydon
 */
 if ( ! is_active_sidebar( 'sidebar-1' ) ) { return; } ?>
 

@@ -1,6 +1,6 @@
 <?php
 /**
-* @package eyedea
+* @package greydon
 */
 get_header(); ?>
 

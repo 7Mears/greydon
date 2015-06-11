@@ -1,37 +1,44 @@
 <?php
 /**
-* @package eyedea
+* @package greydon
 */
 get_header(); ?>
+<section id="home-hero" class="home-hero">
+  <div class="hero-bg parallax"></div>
+  <div class="container">
 
-<div class="container">
+    <div class="hero-content">
+      <div class="section-left">
+        <p class="section-title">Now available</p>
+      </div>
 
-  <section class="hero">
-    <h1>Starter page</h1>
-    <p>Competently mesh adaptive bandwidth after mission-critical information. Dynamically plagiarize interdependent infomediaries and.</p>
-  </section>
+      <div class="section-right">
+        <h2 class="hero-title">Omniverse : Type 3 :<br /> Aum niverse</h2>
+        <button>Download</button>
+      </div>
+    </div>
 
-  <section>
-    <p>Phosfluorescently generate bleeding-edge users rather than collaborative manufactured products. Synergistically actualize principle-centered e-markets through multifunctional web services. Uniquely formulate functionalized intellectual capital through
-      24/365 partnerships. Interactively reintermediate professional metrics rather than accurate metrics. Collaboratively enhance proactive potentialities without magnetic alignments. Intrinsicly promote clicks-and-mortar scenarios whereas empowered
-      collaboration and idea-sharing. Interactively embrace end-to-end interfaces without backend products. Efficiently mesh low-risk high-yield supply chains with cost effective.</p>
 
-    <p>Phosfluorescently generate bleeding-edge users <strong>rather than collaborative manufactured</strong> products. Synergistically actualize principle-centered e-markets through multifunctional <strong>web services</strong>. Uniquely formulate functionalized
-      intellectual capital through 24/365 partnerships. Interactively reintermediate professional metrics rather than accurate metrics. Collaboratively enhance proactive potentialities without magnetic alignments. Intrinsicly promote clicks-and-mortar
-      scenarios whereas empowered collaboration and idea-sharing. Interactively embrace end-to-end interfaces without backend products. Efficiently mesh low-risk high-yield supply chains with cost effective.</p>
+    <div class="news-content">
+      <div class="section-left">
+        <p class="section-title">Blog</p>
+      </div>
 
-    <button>This is a button</button>
+      <div class="section-right">
+        <h2>Omniverse : Type 3 : Aum niverse</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-    <p><i class="fa fa-birthday-cake"></i> This is a cake</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
 
-    <h1>The quick be round fox jumps over the lazy dog</h1>
-    <h2>The quick be round fox jumps over the lazy dog</h2>
-    <h3>The quick be round fox jumps over the lazy dog</h3>
-    <h4>The quick be round fox jumps over the lazy dog</h4>
-    <h5>The quick be round fox jumps over the lazy dog</h5>
-    <h6>The quick be round fox jumps over the lazy dog</h6>
-  </section>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
 
 </div>
-
+</section>
 <?php get_footer(); ?>
