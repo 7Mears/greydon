@@ -8,6 +8,12 @@
   float: left;
   padding: $padding-main;
 
+  @include bp-medium() {
+    @include rowMachine(1,0%);
+    float: none;
+    margin-top: 50px;
+  }
+
   h3 {
     margin-top: 0;
   }
@@ -32,6 +38,10 @@
 .site-links {
   background-color: $color__background-darker;
   padding: $padding-main;
+
+  @include bp-medium() {
+    margin-top: 50px;
+  }
 
   ul {
     list-style-type: none;

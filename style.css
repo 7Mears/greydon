@@ -914,10 +914,22 @@ html {
   width: 30%;
   float: left;
 }
+@media only screen and (max-width: 50em) {
+  .section-left {
+    width: 100%;
+    float: none;
+  }
+}
 
 .section-right {
   float: right;
   width: 70%;
+}
+@media only screen and (max-width: 50em) {
+  .section-right {
+    width: 100%;
+    float: none;
+  }
 }
 
 .section-title {
@@ -945,6 +957,11 @@ html {
   width: 100%;
   content: "";
   display: table;
+}
+@media only screen and (max-width: 50em) {
+  .hero-content {
+    padding: 100px 0;
+  }
 }
 .hero-content .section-left a {
   text-decoration: none;
@@ -999,6 +1016,21 @@ html {
   margin-right: 0;
   margin-bottom: 0;
 }
+@media only screen and (max-width: 50em) {
+  .footer-card {
+    width: 100%;
+    float: none;
+    margin-top: 50px;
+  }
+  .footer-card:nth-child(n) {
+    margin-bottom: 0%;
+    margin-right: 0%;
+  }
+  .footer-card:nth-child(1n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
 .footer-card h3 {
   margin-top: 0;
 }
@@ -1018,6 +1050,11 @@ html {
 .site-links {
   background-color: #040a1a;
   padding: 2em;
+}
+@media only screen and (max-width: 50em) {
+  .site-links {
+    margin-top: 50px;
+  }
 }
 .site-links ul {
   list-style-type: none;

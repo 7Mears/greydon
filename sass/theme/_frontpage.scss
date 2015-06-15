@@ -2,11 +2,21 @@
 .section-left {
   width: 30%;
   float: left;
+
+  @include bp-medium {
+    width: 100%;
+    float: none;
+  }
 }
 
 .section-right {
   float: right;
   width: 70%;
+
+  @include bp-medium {
+    width: 100%;
+    float: none;
+  }
 }
 
 .section-title {
@@ -32,6 +42,10 @@
   padding: 200px 0 300px 0;
   width: 100%;
   @include clearfix();
+
+  @include bp-medium {
+    padding: 100px 0;
+  }
 
   .section-left a {
     text-decoration: none;
