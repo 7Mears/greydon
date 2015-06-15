@@ -10,10 +10,12 @@
 }
 
 .section-title {
-  border-bottom: 2px solid rgba($color6, 0.6);
-  margin-right: 50px;
-  color: rgba(255,255,255,0.6);
+  border-bottom: 2px solid $grey;
+  margin-right: 30%;
+  color: $grey;
   padding-top: 0.5em;
+  text-transform: uppercase;
+  @include font-size(1);
 }
 //hero
 .hero-bg {
@@ -30,13 +32,17 @@
   padding: 200px 0 300px 0;
   width: 100%;
   @include clearfix();
+
+  button {
+    text-transform: uppercase;
+  }
 }
 
 .hero-title {
-  color: $color3;
+  color: $color1;
   font-family: $font__primary;
   @include font-size(5);
-  font-weight: 700;
+  font-weight: 100;
   text-shadow: 1px 1px 20px rgba($color3, 0.4)
             , -1px -1px 20px rgba($color3, 0.4);
   margin: 0;
@@ -50,6 +56,8 @@
   @include clearfix();
 
   .section-right {
+    padding-bottom: 4em;
+
     h2 {
       margin: 0;
     }
