@@ -10,9 +10,9 @@
 }
 
 .section-title {
-  border-bottom: 2px solid $grey;
+  border-bottom: 1px solid rgba($color1, 1);
   margin-right: 30%;
-  color: $grey;
+  color: rgba($color1, 0.7);
   padding-top: 0.5em;
   text-transform: uppercase;
   @include font-size(1);
@@ -33,20 +33,23 @@
   width: 100%;
   @include clearfix();
 
-  button {
-    text-transform: uppercase;
+  .section-left a {
+    text-decoration: none;
   }
 }
 
 .hero-title {
   color: $color1;
-  font-family: $font__primary;
+  font-weight: 300;
   @include font-size(5);
-  font-weight: 100;
-  text-shadow: 1px 1px 20px rgba($color3, 0.4)
-            , -1px -1px 20px rgba($color3, 0.4);
+  text-shadow: 1px 1px 20px rgba($color1, 0.2)
+            , -1px -1px 10px rgba($color1, 0.2);
   margin: 0;
   line-height: 1.2;
+
+  background: -webkit-linear-gradient(330deg, $blue 0%, $green 25%, $red 50%, $purple 75%, $yellow 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 //blog
@@ -55,11 +58,16 @@
   width: 100%;
   @include clearfix();
 
+  a {
+    text-decoration: none;
+  }
+
   .section-right {
     padding-bottom: 4em;
 
-    h2 {
+    h3 {
       margin: 0;
+      @include font-size(2.8);
     }
   }
 }

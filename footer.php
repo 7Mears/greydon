@@ -50,7 +50,7 @@ window.newsletter_check = function (f) {
     <p>
       Something something bandcamp subscription.
     </p>
-    <button type="button" name="button">Subscribe</button>
+    <button type="button" name="button">Subscribe on bandcamp</button>
   </div><!-- /footer-card -->
 
   <div class="footer-card">

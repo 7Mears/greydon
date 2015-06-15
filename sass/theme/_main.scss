@@ -8,3 +8,11 @@ html {
   width: 90%;
   margin: 0 auto;
 }
+
+.container-sm {
+  width: $M;
+  margin: 0 auto;
+  @include bp-medium() {
+    width: 90%;
+  };
+}

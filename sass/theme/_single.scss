@@ -1,0 +1,21 @@
+.blog-post {
+  .entry-header {
+    text-align: center;
+    padding: 250px 0;
+  }
+
+  .entry-title {
+    text-shadow: 1px 1px 20px rgba(0,0,0, 1)
+              , -1px -1px 10px rgba(0,0,0, 1);
+  }
+
+  .entry-meta {
+    margin: 4em 0;
+  }
+
+  .entry-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 4em;
+  }
+}

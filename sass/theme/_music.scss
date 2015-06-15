@@ -11,11 +11,24 @@
 .album-embed {
   width: 30%;
   float: left;
+
+  @include bp-large() {
+    width: 40%;
+  }
+  @include bp-medium() {
+    width: 100%;
+  }
 }
 
 .album-info {
   width: 70%;
   float: right;
+  @include bp-large() {
+    width: 60%;
+  }
+  @include bp-medium() {
+    width: 100%;
+  }
 
   h2 {
     margin-top: 0;
