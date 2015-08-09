@@ -1,83 +1,44 @@
-//global
-.section-left {
-  width: 30%;
-  float: left;
-
-  @include bp-medium {
-    width: 100%;
-    float: none;
+.home {
+  .section-title {
+    color: darken($color1, 30%);
+    border-bottom: 2px solid darken($blue, 30%);
+    margin-right: 100px;
+    font-style: italic;
+    @include font-size(1);
   }
-}
-
-.section-right {
-  float: right;
-  width: 70%;
-
-  @include bp-medium {
-    width: 100%;
-    float: none;
-  }
-}
-
-.section-title {
-  border-bottom: 1px solid rgba($color1, 1);
-  margin-right: 30%;
-  color: rgba($color1, 0.7);
-  padding-top: 0.5em;
-  text-transform: uppercase;
-  @include font-size(1);
-}
-//hero
-.hero-bg {
-  position: fixed;
-  z-index: -1;
-  height: 900px;
-  width: 100%;
-  background: url('./images/hero.jpg') no-repeat center center;
-  background-attachment: fixed;
 }
 
 .hero-content {
-  position: relative;
-  padding: 200px 0 300px 0;
-  width: 100%;
-  @include clearfix();
-
-  @include bp-medium {
-    padding: 100px 0;
-  }
-
-  .section-left a {
-    text-decoration: none;
-  }
+  padding: 200px 0;
+  text-align: center;
 }
 
 .hero-title {
   color: $color1;
-  font-weight: 300;
   @include font-size(5);
   text-shadow: 1px 1px 20px rgba($color1, 0.2)
             , -1px -1px 10px rgba($color1, 0.2);
   margin: 0;
   line-height: 1.2;
-
   background: -webkit-linear-gradient(330deg, $blue 0%, $green 25%, $red 50%, $purple 75%, $yellow 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @include bp-small {
+    @include font-size(3);
+  }
 }
 
 //blog
-.news-content {
+.home-news {
   position: relative;
   width: 100%;
   @include clearfix();
 
-  a {
-    text-decoration: none;
-  }
+  a { text-decoration: none; }
 
   .section-right {
-    padding-bottom: 4em;
+    margin-bottom: 4em;
 
     h3 {
       margin: 0;

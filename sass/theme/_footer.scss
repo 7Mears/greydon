@@ -1,5 +1,10 @@
 .site-footer {
   padding-top: ($padding-main * 2);
+
+  .fa {
+    @include font-size(1.6);
+    margin-right: 5px;
+  }
 }
 
 .footer-card {
@@ -34,7 +39,7 @@
     border-top: 2px solid $red;
   }
 }
-
+// Second Navigation
 .site-links {
   background-color: $color__background-darker;
   padding: $padding-main;
