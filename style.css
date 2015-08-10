@@ -938,9 +938,17 @@ html {
   font-size: 1rem;
 }
 
+.home-hero {
+  background: url(./images/hero.jpg) no-repeat center center;
+  background-size: cover;
+}
+
 .hero-content {
   padding: 200px 0;
   text-align: center;
+}
+.hero-content p {
+  color: #adadad;
 }
 
 .hero-title {
@@ -1017,8 +1025,8 @@ html {
     margin-bottom: 0;
   }
 }
-.footer-card h3 {
-  margin-top: 0;
+.footer-card h5 {
+  margin: 0;
 }
 .footer-card:first-child {
   border-top: 2px solid #4CAF50;

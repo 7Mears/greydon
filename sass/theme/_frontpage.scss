@@ -7,10 +7,19 @@
     @include font-size(1);
   }
 }
+//hero
+.home-hero {
+  background: url(./images/hero.jpg) no-repeat center center;
+  background-size: cover;
+}
 
 .hero-content {
   padding: 200px 0;
   text-align: center;
+
+  p {
+    color: darken($color1, 30%);
+  }
 }
 
 .hero-title {

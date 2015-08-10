@@ -7,7 +7,7 @@
 <footer class="site-footer container">
 
   <div class="footer-card">
-    <h3>Best way to support me</h3>
+    <h5>Best way to support me</h5>
     <p>
       Something something bandcamp subscription.
     </p>
@@ -15,7 +15,7 @@
   </div><!-- /footer-card -->
 
   <div class="footer-card">
-    <h3>Social media</h3>
+    <h5>Social media</h5>
     <p>
       <a href="#0"><i class="fa fa-facebook-official"></i></a>
       <a href="#0"><i class="fa fa-twitter"></i></a>

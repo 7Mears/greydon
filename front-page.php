@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="hero-content">
         <h2 class="hero-title">Omniverse: Type 3:<br /> Aum niverse</h2>
         <p>September 28th</p>
-    </div>
+    </div><!-- /hero-content -->
   </div><!-- /container -->
 </section><!-- /home-hero -->
 
