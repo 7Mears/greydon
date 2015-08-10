@@ -13,7 +13,7 @@
   float: left;
 
   @include bp-large() {
-    width: 40%;
+    width: 35%;
   }
   @include bp-medium() {
     width: 100%;
@@ -24,16 +24,16 @@
   width: 70%;
   float: right;
   @include bp-large() {
-    width: 60%;
+    width: 65%;
   }
   @include bp-medium() {
     width: 100%;
   }
-
-  h2 {
-    margin-top: 0;
+  // album title
+  h3 {
+    margin: 0;
   }
-
+  // album content
   p {
     @include font-size(1);
   }
