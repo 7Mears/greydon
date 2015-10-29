@@ -23,6 +23,10 @@
     margin: 0;
   }
 
+  p {
+    color: rgba($color1, 0.7);
+  }
+
   &:first-child {
     border-top: 2px solid $green;
   }

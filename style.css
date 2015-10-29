@@ -944,7 +944,7 @@ html {
 }
 
 .hero-content {
-  padding: 200px 0;
+  padding: 300px 0;
   text-align: center;
 }
 .hero-content p {
@@ -953,8 +953,8 @@ html {
 
 .hero-title {
   color: #FAFAFA;
-  font-size: 80px;
-  font-size: 5rem;
+  font-size: 57.6px;
+  font-size: 3.6rem;
   text-shadow: 1px 1px 20px rgba(250, 250, 250, 0.2), -1px -1px 10px rgba(250, 250, 250, 0.2);
   margin: 0;
   line-height: 1.2;
@@ -962,10 +962,22 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-@media only screen and (max-width: 25em) {
+@media only screen and (max-width: 87em) {
   .hero-title {
     font-size: 48px;
     font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .hero-title {
+    font-size: 32px;
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .hero-title {
+    font-size: 32px;
+    font-size: 2rem;
   }
 }
 
@@ -1027,6 +1039,9 @@ html {
 }
 .footer-card h5 {
   margin: 0;
+}
+.footer-card p {
+  color: rgba(250, 250, 250, 0.7);
 }
 .footer-card:first-child {
   border-top: 2px solid #4CAF50;

@@ -7,21 +7,21 @@
 <footer class="site-footer container">
 
   <div class="footer-card">
-    <h5>Best way to support me</h5>
+    <h5>Subscribe</h5>
     <p>
-      Something something bandcamp subscription.
+      All the new shows I create, streaming instantly on your mobile device via the free Bandcamp app.
     </p>
-    <button type="button" name="button">Subscribe on bandcamp</button>
+    <a href="https://greydonsquare.bandcamp.com/subscribe" target="_BLANK"><button type="button" name="button">Learn more</button></a>
   </div><!-- /footer-card -->
 
   <div class="footer-card">
-    <h5>Social media</h5>
+    <h5>Networks</h5>
     <p>
-      <a href="#0"><i class="fa fa-facebook-official"></i></a>
-      <a href="#0"><i class="fa fa-twitter"></i></a>
-      <a href="#0"><i class="fa fa-google-plus"></i></a>
-      <a href="#0"><i class="fa fa-reddit"></i></a>
-      <a href="#0"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.facebook.com/greydonsquare" target="_BLANK" ><i class="fa fa-facebook-official"></i></a>
+      <a href="https://twitter.com/greydonsquare" target="_BLANK" ><i class="fa fa-twitter"></i></a>
+      <!-- <a href="#" target="_BLANK" ><i class="fa fa-google-plus"></i></a> -->
+      <a href="https://www.reddit.com/r/greydonsquare" target="_BLANK" ><i class="fa fa-reddit"></i></a>
+      <a href="https://instagram.com/greydonsquare" target="_BLANK" ><i class="fa fa-instagram"></i></a>
     </p>
   </div><!-- /footer-card -->
 
@@ -34,7 +34,7 @@
   </div>
 
   <div class="site-info">
-    Website by <a href="http://www.vireoproductions.com">Vireo</a>
+    <a href="http://wergrandunified.com/" target="_BLANK">Grand Unified Theory</a>
   </div>
   <!-- /site-info -->
 </footer>
